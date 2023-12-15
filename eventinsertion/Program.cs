@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-
+namespace eventinsertion { 
 public class Program
 {
     public static void Main(string[] args)
@@ -17,6 +17,7 @@ public class Program
                 webBuilder.ConfigureServices(services =>
                 {
                     services.AddControllers();
+                    services.AddScoped(typeof(TelemetryWriter));
                     // In ConfigureServices method of Startup.cs in Application 1
                     services.AddCors(options =>
                     {
@@ -43,3 +44,4 @@ public class Program
                 });
             });
 }
+    }

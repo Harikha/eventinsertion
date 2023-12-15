@@ -1,12 +1,10 @@
-using System;
+/*using System;
 using System.Net.Http;
 using System.Text;
 public class HomeController
 {
     public void Index()
     {
-            string url = "http://localhost:7153/Home/insertData"; // Replace with the server's URL
-        Console.WriteLine(url);
             using (HttpClient client = new HttpClient())
             {
                 // Example values to be inserted into the table
@@ -30,4 +28,4 @@ public class HomeController
         }
         }
     }
-
+*/
